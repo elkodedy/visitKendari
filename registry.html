@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>daftar</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="daftar.css">
+</head>
+<body>
+	<div class="container">
+		<div class="transparant">
+			<div class="fa fa-arrow-circle-o-left" onclick="historyBack()"></div>
+			<div class="fa fa-arrow-circle-o-right" onclick="historyForward()"></div>
+			<!-- <nav class="navbar">
+				<ul>
+					<li><a href="">Berita Terbaru</a></li>
+					<li><a href="akomodasi.html">Akomodasi</a></li>
+					<li><a href="destinasi.html">Destinasi</a></li>
+					<li><a href="pemandu.html" onclick="displayPemandu()">Pemandu</a></li>
+					<li><a href="home.html">Beranda</a></li>
+				</ul>
+			</nav> -->
+			<div class="header" onclick="toHome()">
+				<div class="logo" style="margin-left: 0; cursor: pointer;">
+					<div class="visitLogo">Visit</div>
+					<div class="kendariLogo">Kendari</div>
+				</div>
+				<div class="pKendari">Your Account</div>
+			</div>
+			<!-- ________________________________________________________________________ -->
+			<div class="step2 daftar masukAtauDaftar" style="display: block;">
+				<div onclick="masuk()" class="masukDaftar headMasuk headMasuk1" style="width: 70%;font-size: 40px;">Register for a Guide</div>
+				<div class="headStep headStep1">step 1</div>
+				<div class="headStep">step 2</div>
+				<div class="headComment">Fill Services</div>
+				<table>
+					<tr>
+						<td><input class="wisataTujuan inputData" placeholder="Tour Destination"></input></td>
+					</tr>
+					<tr>
+						<td>Number of Service Hours : <input class="jumlahJam inputData"></td>
+					</tr>
+					<tr>
+						<td>
+							Select Guide
+							<select class="inputPemandu inputData">
+								<option>Elko Dedy Pratama</option>
+								<option>Vina Olivia Ismail</option>
+								<option>Dovier Cakra Wardaya</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td><textarea class="pesan inputData" placeholder="Message For Your Guide"></textarea></td>
+					</tr>
+					<tr>
+						<td><button onclick="inputStep2()" class="btnlogin">Next</button></td>
+					</tr>
+					<tr>
+						<td colspan="3" class="tdbantuan">
+							<hr>
+							Already register for a guide? <br> <strong style="cursor: pointer; text-decoration: underline;" onclick="getCard()">Klik here to get your Card.</strong>
+						</td>
+					</tr>
+				</table>
+			</div>
+
+			<!-- ________________________________________________________________________ -->
+			<!-- ________________________________________________________________________ -->
+
+			<div class="step4 daftar masukAtauDaftar">
+				<div onclick="masuk()" class="masukDaftar headMasuk headMasuk1">Registry</div>
+				<div class="headStep headStep1s">step 1</div>
+				<div class="headStep headStep2">step 2</div>
+				<div class="headComment">Take Your Tourist Card</div>
+				<div class="kartuWisatawan">
+					<div class="logo logoCard">
+						<div class="visitLogo visitLogoCard">Visit</div>
+						<div class="kendariLogo">Kendari</div>
+					</div>
+					<div class="headKartu">Tourist Card</div>
+					<div class="tempatfoto">
+						<div style="margin-top: 45%;">Your Photo Here</div>
+					</div>
+					<table>
+						<tr>
+							<td>Name</td><td> : </td><td class="namaWisatawan dataWisata">-</td>
+						</tr>
+						<tr>
+							<td>Tourist Id</td><td> : </td><td class="noWisatawan dataWisata">-</td>
+						</tr>
+						<tr>
+							<td>Citizenship</td><td> : </td><td class="kewarganegaraanWisatawan dataWisata">-</td>
+						</tr>
+						<tr>
+							<td>Guide Name</td><td> : </td><td class="namaPemandu dataWisata">-</td>
+						</tr>
+						<tr>
+							<td>Valid until</td><td> : </td><td class="berlakuHingga dataWisata">-</td>
+						</tr>
+					</table>
+				</div>
+				<button class="btnlogin" onclick="window.print()" style="margin: 10px; font-size: 18px;">Print Card</button>
+				<div>Show Your Tourist Card To The Guide As Proof Of Administrative Registration.</div>
+			</div>
+			<footer>
+				<div class="fooLine"></div>
+				<div class="footer">
+					<div class="fooSign fooContent">
+						<div><font class="fooKendari">visit Kendari </font>sign up</div>
+						<input placeholder="Enter Username">
+						<button>sign up</button>
+					</div>
+					<div class="fooContact fooContent">
+						<div><font class="fooKendari">visit Kendari</font> expert advice</div>
+						<div class="fooCall">
+							call us <font class="fooNum">082271362624</font> or <font class="fooEmail">email us >></font>
+						</div>
+					</div>
+					<div class="fooSosmed fooContent">
+						<div><font class="fooKendari">visit Kendari</font> social media</div>
+						<div class="visitIcon fa fa-facebook"><b class="visitSosmed">facebook</b></div>
+						<div class="visitIcon fa fa-twitter"><b class="visitSosmed">twitter</b></div>
+						<div class="visitIcon fa fa-instagram"><b class="visitSosmed">instagram</b></div>
+						<div class="visitIcon fa fa-youtube"><b class="visitSosmed">youtube</b></div>
+					</div>
+				</div>
+			</footer>
+			<!-- ________________________________________________________________________ -->
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+	 	var j = localStorage.getItem("userKe");
+
+		function inputStep2(){
+				var wisata,jam,pilihPemandu,pemandu;
+	// 
+				wisata = document.querySelector('.wisataTujuan').value;
+				jam = document.querySelector('.jumlahJam').value;
+				pilihPemandu = document.querySelector('.inputPemandu').value;
+				pemandu = document.querySelector('.pesan').value;
+	// 
+				document.querySelector('.wisataTujuan').value = "";
+				document.querySelector('.jumlahJam').value = "";
+				document.querySelector('.inputPemandu').value = "";
+				document.querySelector('.pesan').value = "";
+				
+				if(wisata!="" && jam!="" && pemandu!="" && pilihPemandu!=""){
+					localStorage.setItem("wisata"+(j)+"",wisata);
+					localStorage.setItem("jam"+(j)+"",jam);
+					localStorage.setItem("pilihPemandu"+(j)+"",pilihPemandu);
+					localStorage.setItem("pemandu"+(j)+"",pemandu);
+					// 
+					document.querySelector(".step2").style.display = "none";
+					document.querySelector(".step4").style.display = "block";
+					// document.querySelector('.transparant').style.minHeight = "88vh";
+					
+					document.querySelector(".namaWisatawan").innerHTML = localStorage.getItem("nama"+j+"");
+					document.querySelector(".noWisatawan").innerHTML = "E20-L12-K99O"+j+"";
+					document.querySelector(".kewarganegaraanWisatawan").innerHTML = localStorage.getItem("kewarganegaraan"+j+"");
+					document.querySelector(".namaPemandu").innerHTML = localStorage.getItem("pilihPemandu"+j+"");
+					document.querySelector(".berlakuHingga").innerHTML = localStorage.getItem("tanggal"+j+"")+" - July - 2018";
+
+				}else window.alert("isi semua data yang tersedia");
+			}
+			function getCard(){
+				if(localStorage.getItem("wisata"+j+"")!=null){
+					document.querySelector(".step2").style.display = "none";
+					document.querySelector(".step4").style.display = "block";
+					// document.querySelector('.transparant').style.minHeight = "88vh";
+					
+					document.querySelector(".namaWisatawan").innerHTML = localStorage.getItem("nama"+j+"");
+					document.querySelector(".noWisatawan").innerHTML = "E20-L12-K99O"+j+"";
+					document.querySelector(".kewarganegaraanWisatawan").innerHTML = localStorage.getItem("kewarganegaraan"+j+"");
+					document.querySelector(".namaPemandu").innerHTML = localStorage.getItem("pilihPemandu"+j+"");
+					document.querySelector(".berlakuHingga").innerHTML = localStorage.getItem("tanggal"+j+"")+" July 2018";
+				}else window.alert("You have not registered yet!!")
+			}
+	</script>
+	<script type="text/javascript" src="myScript.js"></script>
+</body>
+</html>

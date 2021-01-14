@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>daftar</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="daftar.css">
+</head>
+<body>
+	<div class="container">
+		<div class="transparant">
+			<div class="fa fa-arrow-circle-o-left" onclick="historyBack()"></div>
+			<div class="fa fa-arrow-circle-o-right" onclick="historyForward()"></div>
+			<!-- <nav class="navbar">
+				<ul>
+					<li><a href="">Berita Terbaru</a></li>
+					<li><a href="akomodasi.html">Akomodasi</a></li>
+					<li><a href="destinasi.html">Destinasi</a></li>
+					<li><a href="pemandu.html" onclick="displayPemandu()">Pemandu</a></li>
+					<li><a href="home.html">Beranda</a></li>
+				</ul>
+			</nav> -->
+
+			<div class="header" onclick="toHome()">
+				<div class="logo" style="margin-left: 0; cursor: pointer;">
+					<div class="visitLogo">Visit</div>
+					<div class="kendariLogo">Kendari</div>
+				</div>
+				<div class="pKendari">Your Account</div>
+			</div>
+			<div class="masukAtauDaftar step0">
+				<div onclick="masuk()" class="masukDaftar headMasuk">Sign In</div>
+				<div onclick="daftarin()" class="masukDaftar headDaftar">Sign Up</div>
+				<table>
+					<tr>
+	 					<td class="tdMasukUser">
+							<input type="text" class="masukUser masukUserName" placeholder="Username">
+						</td>
+					</tr>
+					<tr>
+						<td class="tdMasukUser">
+							<input class="masukUser masukUserPass" placeholder="Password" type="password">
+						</td>
+					</tr>
+					<tr>
+						<td class="tdlogin">
+							<button onclick="login()" class="btnlogin">login</button>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="3" class="tdbantuan">
+							Forgot your account information details? <strong style="cursor: pointer;">Get help to signing in.</strong>
+						</td>
+					</tr>
+					<tr><td colspan="3" class="loginDengan"><hr class="hrAtauKiri">or login with<hr class="hrAtauKanan"></td></tr>
+					<tr>
+						<td colspan="3">
+							<div class="visitIcon signIcon fb fa fa-facebook"><b class="visitSosmed signSosmed">facebook</b></div>
+							<div class="visitIcon signIcon fa fa-twitter"><b class="visitSosmed signSosmed">twitter</b></div>
+							<div class="visitIcon signIcon fa fa-instagram"><b class="visitSosmed signSosmed">instagram</b></div>
+							
+						</td>
+					</tr>
+				</table>
+				<div class="iconLoginDengan"></div>
+				<div class="iconLoginDengan"></div>
+				<div class="iconLoginDengan"></div>
+				<!-- <button onclick="inputStep0()">daftar</button> -->
+			</div>
+			<!-- ________________________________________________________________________ -->
+			<div class="step1 daftar masukAtauDaftar">
+				<div onclick="masuk()" class="masukDaftar headMasuk headMasuk1">Sign In</div>
+				<div onclick="daftarin()" class="masukDaftar headDaftar headDaftar1">Sign Up</div>
+				<div class="headStep headStep1">step 1</div>
+				<div class="headStep">step 2</div>
+				<!-- <div class="headStep">step 3</div> -->
+				<!-- <div class="headStep">step 4</div> -->
+				<div class="headComment">Fill Your Data</div>
+				<table class="stepTable">
+					<tr>
+						<td colspan="2"><input class="inputNama inputData" placeholder="Name" type="text"></td>
+					</tr>
+					<tr>
+						<td class="tdGender"> Gender 
+							<select class="inputGender inputData">
+								<option> Man </option>
+								<option> Woman </option>
+							</select>
+						</td>
+						<td class="tdUmur"><input class="inputUmur inputData" placeholder="Age" type="number"></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input class="inputKewarganegaraan inputData" placeholder="Citizenship"></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input class="inputTelp inputData" placeholder="Phone Number" type="number"></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input class="inputEmail inputData"  placeholder="E-mail" type="email"></td>
+					</tr>
+					<tr>
+						<td colspan="2"><button onclick="inputStep1()" class="btnlogin">Next</button></td>
+					</tr>
+				</table>
+			</div>
+			<!-- ________________________________________________________________________ -->
+			<div class="step2 daftar masukAtauDaftar">
+				<div onclick="masuk()" class="masukDaftar headMasuk headMasuk1">Sign In</div>
+				<div onclick="daftarin()" class="masukDaftar headDaftar headDaftar1">Sign Up</div>
+				<div class="headStep headStep1s">step 1</div>
+				<div class="headStep headStep2">step 2</div>
+				<div class="headStep">step 3</div>
+				<div class="headStep">step 4</div>
+				<div class="headComment">Fill Services</div>
+				<table>
+					<tr>
+						<td><input class="wisataTujuan inputData" placeholder="Tour Destination"></input></td>
+					</tr>
+					<tr>
+						<td>Number of Service Hours : <input class="jumlahJam inputData"></td>
+					</tr>
+					<tr>
+						<td>
+							Select Guide
+							<select class="inputPemandu inputData">
+								<option>Elko Dedy Pratama</option>
+								<option>Vina Olivia Ismail</option>
+								<option>Dovier Cakra Wardaya</option>
+							</select>
+						</td>
+					</tr>
+					<tr>
+						<td><textarea class="pesan inputData" placeholder="Message For Your Guide"></textarea></td>
+					</tr>
+					<tr>
+						<td><button onclick="inputStep2()" class="btnlogin">Next</button></td>
+					</tr>
+				</table>
+			</div>
+			<!-- ________________________________________________________________________ -->
+			<div class="step3 daftar masukAtauDaftar">
+				<div onclick="masuk()" class="masukDaftar headMasuk headMasuk1">Sign In</div>
+				<div onclick="daftarin()" class="masukDaftar headDaftar headDaftar1">Sign Up</div>
+				<div class="headStep headStep1s">step 1</div>
+				<!-- <div class="headStep headStep2s">step 2</div> -->
+				<div class="headStep headStep3">step 2</div>
+				<!-- <div class="headStep">step 4</div> -->
+				<div class="headComment">Enter Username<br>And Password</div>
+				<table>
+					<tr>
+						<td><input class="inputUserName inputData" placeholder="Username"></td>
+					</tr>
+					<tr>
+						<td><input class="inputPassword inputData" placeholder="Password" type="password"></td>
+					</tr>
+					<tr>
+						<td colspan="3"><button onclick="inputStep3()" class="btnlogin">Finish</button></td>
+					</tr>
+					<tr><td colspan="3" class="loginDengan"><hr class="hrAtauKiri">Thank You!!<hr class="hrAtauKanan"></td></tr>
+				</table>
+			</div>
+			<!-- ________________________________________________________________________ -->
+			<div class="step4 daftar masukAtauDaftar">
+				<div onclick="masuk()" class="masukDaftar headMasuk headMasuk1">Sign In</div>
+				<div onclick="daftarin()" class="masukDaftar headDaftar headDaftar1">Sign Up</div>
+				<div class="headStep headStep1s">step 1</div>
+				<div class="headStep headStep2s">step 2</div>
+				<div class="headStep headStep3s">step 3</div>
+				<div class="headStep headStep4">step 4</div>
+				<div class="headComment">Take Your Tourist Card</div>
+				<div class="kartuWisatawan">
+					<div class="headKartu">Tourist Card</div>
+					<table>
+						<tr>
+						</tr>
+						<tr>
+							<td>Name</td><td> : </td><td class="namaWisatawan dataWisata">-</td>
+						</tr>
+						<tr>
+							<td>Tourist Id</td><td> : </td><td class="noWisatawan dataWisata">-</td>
+						</tr>
+						<tr>
+							<td>Citizenship</td><td> : </td><td class="kewarganegaraanWisatawan dataWisata">-</td>
+						</tr>
+						<tr>
+							<td>Guide Name</td><td> : </td><td class="namaPemandu dataWisata">-</td>
+						</tr>
+						<tr>
+							<td>Valid until</td><td> : </td><td class="berlakuHingga dataWisata">-</td>
+						</tr>
+					</table>
+				</div>
+				<button onclick="inputStep4()" class="btnlogin" style="margin: 10px;">save</button>
+				<div>Show Your Tourist Card To The Guide As Proof Of Administrative Registration.</div>
+			</div>
+			<footer>
+				<div class="fooLine"></div>
+				<div class="footer">
+					<div class="fooSign fooContent">
+						<div><font class="fooKendari">visit Kendari </font>sign up</div>
+						<input placeholder="Enter Username">
+						<button>sign up</button>
+					</div>
+					<div class="fooContact fooContent">
+						<div><font class="fooKendari">visit Kendari</font> expert advice</div>
+						<div class="fooCall">
+							call us <font class="fooNum">082271362624</font> or <font class="fooEmail">email us >></font>
+						</div>
+					</div>
+					<div class="fooSosmed fooContent">
+						<div><font class="fooKendari">visit Kendari</font> social media</div>
+						<div class="visitIcon fa fa-facebook"><b class="visitSosmed">facebook</b></div>
+						<div class="visitIcon fa fa-twitter"><b class="visitSosmed">twitter</b></div>
+						<div class="visitIcon fa fa-instagram"><b class="visitSosmed">instagram</b></div>
+						<div class="visitIcon fa fa-youtube"><b class="visitSosmed">youtube</b></div>
+					</div>
+				</div>
+			</footer>
+			<!-- ________________________________________________________________________ -->
+		</div>
+	</div>
+
+	<script type="text/javascript">
+
+	 	var j,k = localStorage.getItem("sign");
+
+		function masuk(){
+			document.querySelector(".masukUserName").value = "";
+			document.querySelector(".masukUserPass").value = "";
+			document.querySelector('.step0').style.display = "block";
+			document.querySelector('.step1').style.display = "none";
+			document.querySelector('.step2').style.display = "none";
+			document.querySelector('.step3').style.display = "none";
+			document.querySelector('.step4').style.display = "none";
+			localStorage.setItem("sign","in");
+		}
+// 
+		function daftarin(){
+			document.querySelector('.step0').style.display = "none";
+			document.querySelector('.step1').style.display = "block";
+			localStorage.setItem("sign","no");
+		}
+		// 
+		setTimeout(masukSign,0);
+		
+		function masukSign(){
+			if(k=="in")
+				masuk();
+			else
+				daftarin();
+		}	
+// 
+// 
+		function inputStep1(){
+			var nama,telp,email,gender,umur,kewarganegaraan,telp,email;
+// 
+			nama = document.querySelector('.inputNama').value;
+			gender = document.querySelector('.inputGender').value;
+			umur = document.querySelector('.inputUmur').value;
+			kewarganegaraan = document.querySelector('.inputKewarganegaraan').value;
+			telp = document.querySelector('.inputTelp').value;
+			email = document.querySelector('.inputEmail').value;
+
+			document.querySelector('.inputNama').value = "";
+			document.querySelector('.inputUmur').value = "";
+			document.querySelector('.inputKewarganegaraan').value = "";
+			document.querySelector('.inputTelp').value = "";
+			document.querySelector('.inputEmail').value = "";
+// 
+			if(nama!="" && gender!="" && umur!="" && kewarganegaraan!="" && telp!="" && email!=""){
+				for(var i=1;i<999;i++){
+					if(localStorage.getItem("nama"+i+"")==null){
+						localStorage.setItem("nama"+i+"",nama);
+						localStorage.setItem("gender"+i+"",gender);
+						localStorage.setItem("umur"+i+"",umur);
+						localStorage.setItem("kewarganegaraan"+i+"",kewarganegaraan);
+						localStorage.setItem("telp"+i+"",telp);
+						localStorage.setItem("email"+i+"",email);
+// 
+						document.querySelector(".step3").style.display = "block";
+						document.querySelector(".step1").style.display = "none";
+// 
+						// document.querySelector('.transparant').style.minHeight = "105vh";
+						j=i;
+// 
+						i=999;
+					}
+				}
+			}else window.alert("isi semua data yang tersedia");
+		}
+
+		function inputStep3(){
+			var username,password,namaPemandu, today=new Date(), nextWeek = today.getDate()+7;
+
+			username = document.querySelector('.inputUserName').value;
+			password = document.querySelector('.inputPassword').value;
+// 
+			document.querySelector('.inputUserName').value = "";
+			document.querySelector('.inputPassword').value = "";
+			
+			if(username!="" && password!=""){
+				localStorage.setItem("username"+(j)+"",username);
+				localStorage.setItem("password"+(j)+"",password);
+// 
+				localStorage.setItem("tanggal"+j+"",nextWeek);
+// 
+				document.querySelector(".step3").style.display = "none";
+				document.querySelector(".step0").style.display = "block";
+// 
+				// document.querySelector('.transparant').style.minHeight = "115vh";
+			}else window.alert("isi semua data yang tersedia");
+			document.querySelector(".namaWisatawan").innerHTML = localStorage.getItem("nama"+j+"");
+			document.querySelector(".noWisatawan").innerHTML = "E20-L12-K99O"+j+"";
+			document.querySelector(".kewarganegaraanWisatawan").innerHTML = localStorage.getItem("kewarganegaraan"+j+"");
+			document.querySelector(".namaPemandu").innerHTML = localStorage.getItem("pilihPemandu"+j+"");
+			document.querySelector(".berlakuHingga").innerHTML = localStorage.getItem("tanggal"+j+"")+" juni 2018";
+		}
+// 
+
+		function login(){
+
+			var nama = document.querySelector('.masukUserName').value;
+			var pass = document.querySelector('.masukUserPass').value;
+			var cek,cekMasuk,localName,localPass;
+			
+			if(nama == "admin" && pass == "admin"){
+				location.href = "admin.html";
+				cek=true;
+			}
+			else if(nama == "" && pass == ""){
+				window.alert("username atau password kosong");
+				cek=true;
+			}
+			else{
+				for(var i=1; i<999; i++){
+					localName = localStorage.getItem("username"+i+"");
+					localPass = localStorage.getItem("password"+i+"");
+					if(localName == nama && localPass == pass){
+
+						location.href = "index.html";
+						localStorage.setItem("sudahMasuk","iya");
+
+						cek=true;
+						cekMasuk=i;
+						localStorage.setItem("userKe",i);
+						i=999;
+						document.querySelector('.masukAtauDaftar').style.display = "none";
+
+					}
+					else if(localName == null && localPass == null)
+						i=999;
+				}
+			}
+			if(cek);
+			else
+				window.alert("username atau password salah");
+		}
+	</script>
+	<script type="text/javascript" src="myScript.js"></script>
+</body>
+</html>

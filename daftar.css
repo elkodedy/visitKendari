@@ -1,0 +1,276 @@
+.container{
+	min-height: 88vh;
+}
+.transparant{
+	min-height: 88vh;
+}
+.header{
+	background-image: none;
+}
+.pKendari{
+	margin: 0 10% 0 0;
+}
+.masukAtauDaftar{
+	padding: 10px;
+	width: 35%;
+	border: 1px solid;
+	margin: 0 0 0 32%;
+	color: #fff;
+	border-radius: 10px;
+	background-color: #00000061;
+	/*text-align: left;*/	
+     /*background-color: #FCD11E;*/
+}
+.masukDaftar{
+	width: 20%;
+	cursor: pointer;
+	float: left;
+	font-size: 20px;
+	text-align: center;
+	padding: 6px 1em 6px 1em;
+	cursor: pointer;
+	font-weight: bold;
+	margin-bottom: 3px solid;
+	border-top: 2px;
+	border-left:  2px;
+	border-right:  2px;
+	border-color:#FCD11E ; 
+	transition: background-color 0.2s ease-out,
+        color 0.2s ease-out;
+}
+.headMasuk{
+	margin-left: 5%;
+	border-bottom: 2px solid #FCD11E;
+}
+.headMasuk1{
+	/*font-size: 40px;*/
+}
+.tdMasukUser{
+	padding: 7px 0 7px 0px;
+}
+.masukUser{
+	font-family: "comic sans ms";
+	padding-left: 15px;
+	width: 60%;
+	height: 4vh;
+	border-radius: 10px;
+}
+.masukAtauDaftar table{
+	width: 100%;
+	margin-top: 10vh;
+}
+.tdlogin{
+	padding: 10px;
+}
+.btnlogin{
+	padding-top-top: 5%;
+	font-size: 20px;
+	width: 25%;
+	text-align: center;
+	padding: 3px 1em 3px 1em;
+	cursor: pointer;
+	font-weight: bold;
+	background:transparent;
+	color: #fff;
+	border-radius: 20px;
+	border: 2px solid #FCD11E; 
+	transition: background-color 0.2s ease-out,
+        color 0.2s ease-out;
+}
+.btnlogin:hover{
+  	background-color: rgba(0, 0, 0, 0.7);
+}
+.tdbantuan{
+	padding: 8px 15% 8px 15%;
+	font-size: 13px;
+}
+.loginDengan{
+	font-size: 16px;
+}
+.hrAtauKiri{
+	width: 27%;
+	float: left;
+	margin-left: 5%;
+	border: 1px dashed #FCD11E;
+}
+.hrAtauKanan{
+	width: 27%;
+	float: right;
+	margin-right: 5%;
+	border: 1px dashed #FCD11E;
+}
+
+/*pemandu*/
+.pemandu{
+	/*display: none;*/
+	background: blue;
+	min-height: 100vh;
+}
+.inputData{
+	padding-left: 15px;
+	font-size: 15px;
+	width: 70%;
+	height: 3vh;
+	border-radius: 5px;
+	font-family : "comic sans ms";
+}
+.inputUserName, .inputPassword{
+	margin: 5px;
+	width: 60%;
+}
+		/*input1*/
+.headMasuk1{
+	border-bottom: none;
+}
+.headDaftar1{
+	border-bottom: 2px solid #FCD11E;
+}
+.daftar table{
+	margin-top: 0px;
+}
+.daftar table tr td{
+	padding: 3px 0 3px 0;
+}
+.headStep{
+	width: 18%;
+	float: left;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	font-size: 18px;
+}
+.headStep1, .headStep1s{
+	clear: both;
+}
+.headStep1, .headStep2, .headStep3, .headStep4{
+	border-bottom: 2px solid #FCD11E;
+}
+.headStep1s, .headStep2s, .headStep3s, .headStep4s{
+	border-bottom: 2px solid #FCD11E91;
+}
+
+.signIcon{
+	float: none;
+	font-size: 25px;
+	width: 7%;
+	margin: 3% 0 0 7%;
+}
+.signSosmed{
+	/*float: none;*/
+	font-size: 20px;
+	/*padding-left: 12px;*/
+}
+.fb{
+	width: 5%;
+	margin-left: 00;
+}
+.signIcon:hover{
+	background-color: #c8c8c8;
+	width: 30%;
+	cursor: pointer;
+	color: #1B2128;
+}
+
+
+.pesan{
+	height: 20vh;
+}
+
+.headComment{
+	font-size: 30px;
+	clear: both;
+}
+.tdGender{
+	width: 65%;
+	text-align: right;
+	padding-right: 5%;
+}
+.inputGender{
+	width: 30%;
+	height: 4vh;
+	border-radius: 5px;
+	padding-left: 5px;
+}
+.tdUmur{
+	text-align: left;
+}
+.inputUmur{
+	width: 40%;
+	border-radius: 5px;
+	padding-left: 5px;
+}
+.step2{
+	/*background-color: gray;*/
+}
+.jumlahJam{
+	width: 18%;
+}
+.inputPemandu{
+	width: 40%;
+	height: 4vh;
+	border-radius: 5px;
+	padding-left: 5px;
+}
+.step3{
+	/*background: #D979DA;*/
+}
+.kartuWisatawan{
+	font-size: 15px;
+	border-radius: 5px;
+	margin-left: 5%;
+	background-image: url("images/background11.jpg");
+	background-size: cover;
+	border: 2px solid #FCD11E;
+	height: 40vh;
+	width: 90%;
+    box-shadow: 0px 0px 7px 0px #fcd11e;
+     /*box-shadow: inset 0px 0px 14px 3px #000;*/
+}
+.logoCard{
+	margin: 4% 0 0 4%;
+	width: 10%;
+	height: 15%;
+	border: 3px dotted #FCD11E;
+	border-right: none;
+	color: #fff;
+	padding-top: 10px;
+	border-radius: 100%;
+	line-height: 50%;
+	font-size: 25px;
+    text-shadow: 3px -2px 0px #000;
+}
+.visitLogoCard{
+	color: #FCD11E;
+	text-shadow: none;
+	margin-left: 17px;
+	letter-spacing: 2px;
+	font-size: 15px;
+}
+.tempatfoto{
+	width: 23%;
+	height: 50%;
+	border-radius: 10px;
+	font-size: 15px;
+	border: 2px dashed #FCD11E;
+	float: left;
+	margin: 3% 0 0 -10%;
+}
+.kartuWisatawan table{
+	width: 65%;
+	float: right;
+	margin: 3% 5% 0 0;
+}
+.kartuWisatawan table tr td{
+	text-align: left;
+}
+.dataWisata{
+	width: 60%;
+}
+.headKartu{
+	text-align: left;
+	margin-left:26%; 
+	font-size: 30px;
+	padding-top: 29px;
+}
+.step1, .step2, .step3, .step4{
+	display: none;
+}

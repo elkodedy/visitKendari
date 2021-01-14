@@ -1,0 +1,69 @@
+.transparant{
+	min-height: 140vh;
+}
+nav{
+	border-bottom: 3px solid #FCD11E; 
+}
+.pemandu{
+	display: none;
+	padding: 5vh 4% 4vh 4%;
+	color: #fff;
+	margin-bottom: 5vh;
+}
+.profilKiri, .profilKanan{
+	width: 45%;
+	border-radius: 7px;
+}
+.profilKiri{
+	float: left;
+	/*background-size: 80% 100%;*/
+	background-repeat: no-repeat;
+	background-size: 100% 100%;
+	background-position: center;
+	background-image: url("images/pemandu3.jpg");
+	height: 60vh;
+  	box-shadow: -1px 1px 20px 4px #fff;
+}
+.pemandu1 .profilKiri{
+	background-image: url("images/pemanduelko2.jpg");
+}
+.pemandu2 .profilKiri{
+	background-image: url("images/pemanduVina2.jpg");
+}
+.pemandu3 .profilKiri{
+	background-image: url("images/pemanduota2.jpeg");
+}
+.profilKanan{
+  	box-shadow: -1px 1px 20px 4px #000;
+	background-color: rgba(0,0,0,0.5);
+	/*border: 1px solid white;*/
+	float: right;
+	text-align: justify;
+}
+.nama{
+	border-radius: 7px;
+	width: 100%;
+	height: 10vh;
+	font-size: 40px;
+	text-align: left;
+	/*border: 1px solid blue;*/
+}
+.textNama{
+	padding: 3vh 4% 4vh 4%;
+	font-size: 20px;
+	/*border: 1px solid red;*/
+}
+.textNama p{
+	text-align: center;
+	cursor: pointer;
+}
+.pPsign{
+	color: #FCD11E;
+	text-decoration: none;
+}
+.pPsign:hover{
+	text-decoration: underline;
+}
+footer{
+	z-index: 5;
+}

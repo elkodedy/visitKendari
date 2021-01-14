@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>pemandu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="Pemandu.css">
+</head>
+<body>
+	<div class="container">
+		<div class="transparant">
+			<div class="fa fa-arrow-circle-o-left" onclick="historyBack()"> </div>
+			<div class="fa fa-arrow-circle-o-right" onclick="historyForward()"></div>
+			<div class="header">
+				<div class="searchBar">
+					<div class="sign" onclick="daftar(1)">sign in</div>
+					<div class="sign" onclick="daftar(0)">sign up</div>
+					<div class="sign signUser signUser1"><i class="fa fa-user"></i> </div>
+					<div class="sign signUser" onclick="keluar()">Sign Out</div>
+					<div class="sign signUser" onclick="getGuide()" style="width: 95%">Get Guide</div>
+					<input placeholder="Search.." class="search">
+					<div class="btnSearch"><i class="fa fa-search"></i></div>
+				</div>
+				<div class="beta">
+					<div>Beta</div>
+					<div class="betaVersion">Version</div>
+				</div>
+				<div class="logo">
+					<div class="visitLogo">Visit</div>
+					<div class="kendariLogo">Kendari</div>
+				</div>
+				<div class="pKendari">Our Guide</div>
+			</div>
+			<nav class="navbar">
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="pemandu.html" class="navMarker">Guide</a></li>
+					<li><a href="destinasi.html">Destination</a></li>
+					<li class="navToko"><a href="toko.html">Online Shop</a></li>
+					<li><a href="">Akomodation</a></li>
+					<li><a href="">Whats News?</a></li>
+					<li class="listButton"><i class="bar fa fa-bars"></i></li>
+				</ul>
+			</nav>
+
+			<div class="slideshow-container">
+				<div class="transparant2">
+					<div class="mySlides fade">
+					  <img class="img" src="images/pemanduelko4.jpg">
+					</div>
+
+					<div class="mySlides fade">
+					  <img src="images/pemanduvina4.jpg" >
+					</div>
+
+
+					<div class="mySlides fade">
+					  <img src="images/pemanduota3.jpeg" >
+					</div>
+					<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+					<a class="next" onclick="plusSlides(1)">&#10095;</a>
+				</div>
+			</div>
+			
+			<article>
+				<div class="peralihan">Our Profesional Guide</div>
+				<div class="miniText"  style="margin-left: 5%">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip exea commodo
+					<div class="learnmore elkoimg">Elko</div>
+				</div>
+				<div class="miniText">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					<div class="learnmore vinaimg">Vina</div>
+				</div>
+				<div class="miniText">	
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					<div class="learnmore otaimg">Ota</div>
+				</div>
+				<button class="profil" onclick="profilPemandu(1)">profil</button>
+				<button class="profil proTeng" onclick="profilPemandu(2)">profil</button>
+				<button class="profil" onclick="profilPemandu(3)">profil</button>
+			</article>
+			
+			<footer>
+				<div class="fooLine"></div>
+				<div class="footer">
+					<div class="fooSign fooContent">
+						<div><font class="fooKendari">visit Kendari </font>sign up</div>
+						<input placeholder="Enter Username">
+						<button>sign up</button>
+					</div>
+					<div class="fooContact fooContent">
+						<div><font class="fooKendari">visit Kendari</font> expert advice</div>
+						<div class="fooCall">call us <font class="fooNum">082271362624</font> or <font class="fooEmail">email us >></font></div>
+					</div>
+					<div class="fooSosmed fooContent">
+						<div><font class="fooKendari">visit Kendari</font> social media</div>
+						<div class="visitIcon fa fa-facebook"><b class="visitSosmed">facebook</b></div>
+						<div class="visitIcon fa fa-twitter"><b class="visitSosmed">twitter</b></div>
+						<div class="visitIcon fa fa-instagram"><b class="visitSosmed">instagram</b></div>
+						<div class="visitIcon fa fa-youtube"><b class="visitSosmed">youtube</b></div>
+					</div>
+				</div>
+			</footer>
+		</div>
+	</div>
+	<script>
+		var slideIndex = 1;
+		showSlides(slideIndex);
+
+		function plusSlides(n) {
+			showSlides(slideIndex += n);
+		}
+
+		function currentSlide(n) {
+			showSlides(slideIndex = n);
+		}
+
+		function showSlides(n) {
+			var i;
+			var slides = document.getElementsByClassName("mySlides");
+			var dots = document.getElementsByClassName("fade");
+			if (n > slides.length) {slideIndex = 1}    
+			if (n < 1) {slideIndex = slides.length}
+			for (i = 0; i < slides.length; i++) {
+			    slides[i].style.display = "none";  
+			}
+			for (i = 0; i < dots.length; i++) {
+			    dots[i].className = dots[i].className.replace(" active", "");
+			}
+			slides[slideIndex-1].style.display = "block";  
+		 	dots[slideIndex-1].className += " active";
+		}
+
+		var myVar = setInterval(nextSlide, 5000);
+		function nextSlide() {
+			plusSlides(1);
+		}
+
+		function profilPemandu(profil){
+			localStorage.setItem("x",profil);
+			location.href = "profilPemandu.html";
+		}
+
+
+		// navbar
+		window.onscroll = function() {
+			myFunction()
+		};
+
+		var navbar = document.querySelector(".navbar");
+		var sticky = navbar.offsetTop;
+
+		function myFunction() {
+		  	if (window.pageYOffset >= sticky) {
+		    	navbar.classList.add("sticky");
+		 		document.querySelector(".navbar").style.backgroundColor = "rgba(0,0,0,0.9)";
+		 		document.querySelector(".slideshow-container").style.marginTop = "15vh";
+			} 
+		 	else {
+		 		navbar.classList.remove("sticky");
+				document.querySelector(".navbar").style.backgroundColor = "rgba(0,0,0,0.5)";
+		 		document.querySelector(".slideshow-container").style.marginTop = "30px";
+			}
+		}
+	</script>
+	<script type="text/javascript" src="myScript.js"></script>
+</body>
+</html>

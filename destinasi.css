@@ -1,0 +1,136 @@
+.container{
+	min-height: 100vh;
+}
+.transparant{
+	min-height: 100vh;
+	color: #fff;
+}
+.namaWisata{
+	font-size: 55px;
+	margin: 1% 0 1% 0;
+}
+
+.list{
+	overflow: auto;
+	background-color:  #0000007d;
+	border-radius: 10px;
+	border: 2px solid #FCD11E;
+	outline: 2px dashed #FCD11E;
+	float: left;
+	width: 12%;
+	height: 80vh;
+	margin: 0 0 0 3%;
+	padding: 2% 0 0 2%;
+}
+.list li{
+	margin-bottom: 6px;
+	font-size: 19px;
+	list-style: none;
+	cursor: pointer;
+	text-align: left;
+}
+.list li:hover{
+	text-decoration: underline;
+	color: #FCD11E;
+}
+
+.bigArt{
+	font-size: 18px;
+	color: #fff;
+	padding: 2%;
+	margin: 0 0 0 2%;
+	float: left;
+	width: 46%;
+	text-align: justify;
+	font-weight: normal;
+	border-radius: 10px;
+	border: 2px solid #FCD11E;
+	outline: 2px dashed #FCD11E;
+	background-color: #0000007d;
+	margin-bottom: 3%;
+}
+.imgArticle{	
+	width: 100%;
+	height: 40vh;
+	background-image: url("images/bokori1.jpg");
+	box-shadow: -1px 1px 20px 4px black;
+	background-size: 100% 100%;
+}
+.prevArticle{
+	margin-left: 40%; 
+	float: left;
+}
+
+.nextArticle{
+	float: left;
+}
+.prevArticle, .nextArticle{
+	margin-top: 4px;
+	border-radius: 5px;
+	font-size: 20px;
+	border: 1px solid #fff;
+	cursor: pointer;
+	text-align: center;
+	width: 10%;
+	line-height: 6vh;
+	height: 6vh;	
+	background-color: #0000006e;
+	transition: background-color 0.2s ease-out,
+        color 0.2s ease-out;
+}
+.prevArticle:hover, .nextArticle:hover{
+	background-color: rgba(0,0,0,0.9);
+}
+.destinasi1, .destinasi2, .destinasi3{
+	clear: both;
+}
+.destinasi2, .destinasi3{
+	display: none;
+}
+.headArticle{
+	clear: both;
+	font-size: 40px;
+}
+.commonArt{
+	border: 2px solid #FCD11E;
+	outline: 2px dashed #FCD11E;
+	float: right;
+	margin: 0 3% 3% 0;
+	width: 25%;
+	background-size: cover;
+	text-align: left;
+	background-color: #0000007d;
+	border-radius: 10px;
+}
+.minimalisImage{
+	box-shadow: 1px 1px 5px 2px #000;
+	border-radius: 10px;
+	float: left;
+	width: 50%;
+	height: 24vh; 
+	background-size: cover;
+	object-fit: cover;
+}
+
+.minimalisText{
+	color: #fff;
+	overflow: hidden;
+	padding: 10px;
+	font-size: 15px; 
+	text-align: left;
+	/*opacity: 0.8;*/
+}
+.headCommon{
+	font-size: 22px;
+	text-decoration: underline #FCD11E;
+	margin-bottom: 3px;
+}
+.lanjut{
+	color: #FCD11E;
+	clear: both;
+	text-decoration: none;
+}
+.lanjut:hover{
+	text-decoration: underline;	
+	cursor: pointer;
+}

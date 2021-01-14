@@ -1,0 +1,425 @@
+body{
+	margin: 0 0 0 0;
+	/*font-family: 'arial';*/
+	color: #000;
+	text-align: center;
+	font-family : "Bahnschrift"
+}
+.container{
+	background-image: url("images/background5.jpg");
+	/*background-position:center;*/
+  	background-size: 100%;
+  	/*background-repeat:no-repeat; */
+	max-width: 1350px;
+	min-height: 100vh;
+	margin: auto;
+}
+.transparant{
+	max-width: 1350px;
+	min-height: 125vh;
+	margin: auto;
+	background-position:center;
+  	background-size:cover;
+  	background-repeat:no-repeat;
+  	background-color: rgba(0, 0, 0, 0.4);
+	
+}
+
+
+/*header*/
+.header{
+	background-image: url("images/background11.jpg");
+	/*background-position: ;*/
+  	background-size: cover;
+  	/*background-repeat:no-repeat;*/
+	padding: 3%;
+	text-align: center;
+}
+.pKendari{
+	color: #FCD11E;
+	font-family: "Dopestyle";
+	text-shadow: 2px -2px 1px #000;
+	font-size: 90px;
+	overflow: hidden;
+	margin-left: 16%;
+}
+.beta{
+	margin: -2% 0 0 -8%;
+	border: 4px solid #fff;
+	color: #fff;
+	letter-spacing: 5px;
+	padding-top: 5px;
+	width: 20%;
+	background-color: #FCD11E;
+	transform: rotate(-40deg);
+	line-height: 20px;
+	float: left;
+	font-size: 30px;
+}
+.betaVersion{
+	font-size: 16px;
+}
+.logo{
+	font-family: "Dopestyle";
+	margin-left: -11%;
+	width: 8%;
+	height: 15vh;
+	border: 12px double #FCD11E;
+	border-right: none;
+	float: left;
+	color: #fff;
+	padding-top: 20px;
+	border-radius: 100%;
+	line-height: 30px;
+	font-size: 60px;
+    text-shadow: 3px -2px 0px #000;
+    /*box-shadow: 0px 0px 2px 2px #fff;*/
+}
+.visitLogo{
+	color: #FCD11E;
+	text-shadow: none;
+	margin-left: 50px;
+	letter-spacing: 3px;
+	font-size: 40px;
+}
+.searchBar{
+	float: right;
+	width: 20%;
+	height: 20vh;
+	/*border: 2px solid red;*/
+}
+.sign{
+	cursor: pointer;
+	float: left;
+	background-color: rgba(0,0,0,0.4);
+	width: 45%;
+	height: 24%;
+	line-height: 200%;
+	text-align: center;
+	font-size: 17px;
+	color: #fff;
+	border-radius: 7px;
+	border: 1px solid #FCD11E;
+	color: #FCD11E;
+	margin: 0 0 2% 2%;
+	transition: background-color 0.2s ease-out,
+        color 0.2s ease-out;
+}
+.sign:hover{
+	background-color: rgba(0,0,0,7);
+}
+.signUser{
+	display: none;
+	width: 27%;
+}
+.signUser1{
+	margin-left: 0 0 2% 0;
+	width: 65%;
+}
+.search{
+	/*margin-top: 30vh;*/
+	float: left;
+  	border: 1px solid #FCD11E;
+  	width: 79%;
+  	height: 25%;
+  	background: transparent;
+	font-family: "comic sans ms";
+	color: #fff;
+	padding-left: 7px;
+	transition: background-color 0.2s ease-out,
+        color 0.2s ease-out;
+}
+.search:hover{
+	background-color: rgba(0,0,0,0.7);
+}
+.btnSearch{
+	/*margin-top: 10vh;*/
+	margin-left: 1%;
+	float: left;
+  	width: 15%;
+  	height: 22.5%;
+	padding-top: 2%;
+  	background: transparent;
+  	color: white;
+  	font-size: 20px;
+  	border: 1px solid #FCD11E;
+  	cursor: pointer;
+	transition: background-color 0.2s ease-out,
+        color 0.2s ease-out;
+}
+.btnSearch:hover{
+	background-color: rgba(0,0,0,0.7);
+}
+nav{
+	padding: 8px 0 0 0;
+	background-color: rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	width: 100%;
+	height: 10vh;
+	color: #ddd;
+	display: block;
+	border-bottom: 3px solid #FCD11E;
+	display: block;
+	z-index: 1;
+	/*position: fixed;*/
+	/*top: 0;*/
+	/*margin-bottom: 2%;*/
+}
+nav ul{
+	margin-left: 5vw;
+	padding: 2vh 0 2vh 0;
+}
+nav ul li{
+	float: left;
+	line-height: 8vh;
+	text-align: center;
+	margin: -4vh 0 0 0;
+	list-style: none;
+}
+nav ul li a{
+	padding: 1em;
+	text-decoration: none;
+	color: #FCD11E;
+	transition: background-color 0.4s ease-out,
+        color 0.4s ease-out;
+}
+nav ul li a:hover{
+	color: #fff;
+	background-color: rgba(0,0,0,0.5);
+}
+.navToko{
+	display: none;
+}
+.navMarker{
+	outline: 1px dashed #fff;
+	border-radius: 7px;
+	color: #fff;
+	/*background-color: rgba(255,255,255,0.9);*/
+}
+.listButton{
+	float: right;
+	margin: -3.6vh 5vw 0 0;
+	font-size: 25px;
+	transition: color 0.2s ease-out;
+}
+.listButton:hover{
+	color: #FCD11E;
+	cursor: pointer;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .mainArt {
+  padding-top: 60px;
+}
+
+
+/*content*/
+.miniImage{
+	float: left;
+	margin-top: 5vh;
+	width: 12.5%;
+	height: 25vh;
+	border-radius: 100px;
+	border: 10px double #FCD11E;
+	background-size: cover;
+}
+	.miniText{
+		float: left;
+		width: 25%;
+		height: 30vh;
+		background:transparent;
+		background-size: cover;
+		margin: 2% 20px 0 3%;
+		color: #fff;
+		background-color:rgba(0, 0, 0, 0.17);
+		border: 2px solid #FCD11E;
+		outline: 2px dashed #FCD11E;
+		border-radius: 10px;
+		overflow: hidden;
+		padding: 1%;
+		font-size: 15px;
+		display: inline-table;
+	}
+
+	.learnmore{
+		cursor: pointer;
+		font-weight: bold;
+		background:transparent;
+		color: #fff;
+		width: 40%;
+		margin-top: 10px;
+		border-top: 2px;
+		border-left:  2px;
+		border-right:  2px;
+		border-color:#FCD11E ; 
+		padding: 1em;
+		transition: background-color 0.2s ease-out, border-radius 0.2s ease-out,
+              color 0.2s ease-out;
+
+	}
+
+	.learnmore:hover{
+		color: #fff;
+		background-color: #FCD11E;
+		border-radius: 30px;
+		border: 0px;
+  		transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+
+	}
+
+.marginUpMore{
+	clear: both;
+}
+.btnMore{
+	margin-top: 3%;
+	clear: both;
+	width: 100%;
+}
+.more{
+	width: 10%;
+	border: 2px solid #ED1325;
+	background: #fff;
+	font-size: 20px;
+	padding: 3px 10px 3px 10px;
+	border-radius: 10px;
+	text-decoration: none;
+	list-style-type: none;
+	color: #ED1325;
+}
+
+
+/*article*/
+
+/*ini footer*/
+.fooLine{
+	clear: both;
+	margin: 0;
+}
+.footer{
+	clear: both;
+	text-align: center;
+	height: 20vh;
+	background-color: #1B2128;
+	margin-top: 8vh;
+	outline: 15px dashed #1B2128;
+}
+.fooContent{
+	color: #c8c8c8;
+	padding-top: 10px;
+	margin-top: 2%;
+	width: 28%;
+	float: left;
+	/*border: 2px solid red;*/
+	height: 50%;
+	font-size: 40px;
+	font-family: "gabriola";
+	font-weight: bold;
+	line-height: 25px;
+}
+.fooSign{
+	margin-left: 10%;
+	width: 25%;
+}
+.fooSign input, .fooSign button{
+	background-color: rgba(0,0,0,0.5);
+	border: 2px solid #FCD11E;
+	border-radius: 6px;
+	padding-left: 6px;
+	color: #fff;
+	width: 40%;
+	margin: 6px 0 0 12%;
+	font-family: "comic sans ms";
+	transition: background-color 0.2s ease-out,
+			color 0.2s ease-out;
+}
+.fooSign button{
+	width: 20%;
+	margin: 0;
+}
+.fooSign input:hover, .fooSign button:hover{
+	background-color: rgba(0,0,0,0.8);
+	/*cursor: pointer;*/
+
+}
+.fooContact{
+	border-right: 2px solid rgba(0,0,0,.5);
+	border-left: 2px solid rgba(0,0,0,.5);
+}
+.fooKendari{
+	color: #FCD11E;
+	font-family: "Dopestyle";
+	font-weight: normal;
+	font-size: 30px;
+}
+.fooCall{
+	color: #5B5B5B;
+	font-size: 25px;
+}
+.fooEmail{
+	color: #c8c8c8;
+	transition: color 0.2s ease-out;
+}
+.fooEmail:hover{
+	cursor: pointer;
+	color: #FCD11E;
+	text-decoration: underline;
+}
+.fooNum{
+	line-height: 30px;
+	color: #c8c8c8;
+	font-size: 32px;
+}
+.visitIcon{
+	float: left;
+	font-size: 30px;
+	width: 9%;
+	margin-left: 5%;
+	overflow: hidden;
+	border-radius: 7px;
+	padding: 3px;
+	transition: width 0.6s ease-out, background-color 0.6s ease-out,
+        color 0.6s ease-out;
+}
+.fa-twitter:hover, .fa-facebook:hover, .fa-instagram:hover, .fa-youtube:hover{
+	background-color: #c8c8c8;
+	width: 40%;
+	cursor: pointer;
+	color: #1B2128;
+}
+.visitSosmed{
+	font-size: 20px;
+	padding-left: 12px;
+}
+.fa-facebook{
+	width: 7%;
+	margin-left: 7%;
+}
+
+/*history*/
+.fa-arrow-circle-o-left, .fa-arrow-circle-o-right{
+  cursor: pointer;
+  height:8vh;
+  position: fixed;
+  z-index: 5;
+  left: 0;
+  bottom: 0;
+  margin: 0 0 2vh 3vw;
+  color: #FCD11E;
+  font-size: 50px;
+  transition: font-size 0.1s ease-out, color 0.1s ease-out;
+}
+.fa-arrow-circle-o-right{
+	margin: 0 0 2vh 7vw;
+}
+
+.fa-arrow-circle-o-left:hover, .fa-arrow-circle-o-right:hover{
+  text-shadow: 2px -2px 0px #000;
+  font-size: 47px;
+  color: #fcd11ec4;
+}

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- <link class="jsbin" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" /> -->
+	<!-- <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script> -->
+	<!-- <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.0/jquery-ui.min.js"></script> -->
+	<meta charset=utf-8 />
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="stylesheet" type="text/css" href="daftar.css">
+	<link rel="stylesheet" type="text/css" href="admin.css">
+	<title>admin</title>
+</head>
+<body>
+	<div class="container">
+		<div class="transparant">
+			<div class="header" onclick="toHome()">
+				<div class="logo" style="margin-left: 0; cursor: pointer;">
+					<div class="visitLogo">Visit</div>
+					<div class="kendariLogo">Kendari</div>
+				</div>
+				<div class="pKendari">Admin</div>
+			</div>
+			<div class="bks">
+				<button onclick="resetUser()" class="btn reset">Reset</button>
+				<button onclick="tampilUser()" class="btn tampil">Tampil</button>
+			</div>
+			<table class="tampilUser1">
+				<div class="userKosong pKendari"></div>
+			</table>
+		</div>
+	</div>
+
+		
+	<script type="text/javascript">
+		function resetUser() {
+			window.alert("user di reset");
+			for(var i=1;i<999;i++){
+				if(localStorage.getItem("nama"+i+"")!=null){
+					localStorage.removeItem("nama"+i+"");
+					localStorage.removeItem("gender"+i+"");
+					localStorage.removeItem("umur"+i+"");
+					localStorage.removeItem("kewarganegaraan"+i+"");
+					localStorage.removeItem("telp"+i+"");
+					localStorage.removeItem("email"+i+"");
+
+					localStorage.removeItem("jam"+(i)+"");
+					localStorage.removeItem("wisata"+(i)+"")
+					localStorage.removeItem("pilihPemandu"+(i)+"");
+					localStorage.removeItem("pemandu"+(i)+"");
+					
+					localStorage.removeItem("username"+(i)+"")
+					localStorage.removeItem("password"+(i)+"");
+					
+					localStorage.removeItem("tanggal"+(i)+"");
+				
+				}else return 0;
+			}
+
+			// document.querySelector('.tampilUser1').innerHTML = "user di reset";
+		}
+
+		function tampilUser(){
+			document.querySelector('.tampilUser1').innerHTML = "";
+			if(localStorage.getItem("nama1")==null){
+				document.querySelector('.userKosong').innerHTML = "User Kosong";
+				// window.alert("user kosong");
+			}
+			else{
+				for(var i=1;i<999;i++){
+					if(localStorage.getItem("nama"+i+"")==null) i=999;
+					else{
+						document.querySelector('.tampilUser1').innerHTML += (
+							"</tr><tr><td colspan=\"3\" class=\"ket garis nomorUser\">User "+i+"</td></tr>"+
+							"<tr><td class=\"ket\">Nama</td><td>:</td><td>" + localStorage.getItem("nama"+i+"") + "</td></tr>"+
+							"<tr><td class=\"ket\">Gender</td><td>:</td><td>" + localStorage.getItem("gender"+i+"") + "</td></tr>"+
+							"<tr><td class=\"ket\">Umur</td><td>:</td><td>" + localStorage.getItem("umur"+i+"") + "</td></tr>"+
+							"<tr><td class=\"ket\">Kewarganegaraan</td><td>:</td><td>" + localStorage.getItem("kewarganegaraan"+i+"") + "</td></tr>"+
+							"<tr><td class=\"ket\">No.Telepon</td><td>:</td><td>" + localStorage.getItem("telp"+i+"") + "</td></tr>"+
+							"<tr><td class=\"ket\">Email</td><td>:</td><td>" + localStorage.getItem("email"+i+"") +"</td></tr>"+
+							"<tr><td class=\"ket\">jumlah jam</td><td>:</td><td>" + localStorage.getItem("jam"+i+"") +"</td></tr>"+
+							"<tr><td class=\"ket\">wisata tujan</td><td>:</td><td>" + localStorage.getItem("wisata"+i+"") +"</td></tr>"+
+							"<tr><td class=\"ket\">pemandu</td><td>:</td><td>" + localStorage.getItem("pilihPemandu"+i+"") +"</td></tr>"+
+							"<tr><td class=\"ket\">Pesan Untuk Pemandu</td><td>:</td><td>" + localStorage.getItem("pemandu"+i+"") +"</td></tr>"+
+							"<tr><td class=\"ket\">Tanggal Kadaluarsa</td><td>:</td><td>" + localStorage.getItem("tanggal"+i+"") +"</td></tr>"+
+							"<tr><td class=\"ket\">Username</td><td>:</td><td>" + localStorage.getItem("username"+i+"") +"</td></tr>"+
+							"<tr><td class=\"ket\">Password</td><td>:</td><td>" + localStorage.getItem("password"+i+"") +"</td></tr>"+
+							"<tr><td class=\"ket garis\" colspan=\"3\"><button onclick=\"hapusUser("+i+")\" class=\"btn hapus\">Hapus User "+i+"</button></td></tr>" +
+							"<tr><td class=\"ket garis batas\" colspan=\"3\">-----------------------------------------</td></tr>" 
+						);
+					}
+				}
+			}
+		}
+
+		function hapusUser(x){
+			for(var i=x;i<999;i++){
+				if(localStorage.getItem("nama"+i+"")==null){
+					localStorage.removeItem("nama"+(i-1)+"");
+					localStorage.removeItem("gender"+(i-1)+"");
+					localStorage.removeItem("umur"+(i-1)+"");
+					localStorage.removeItem("kewarganegaraan"+(i-1)+"");
+					localStorage.removeItem("telp"+(i-1)+"")
+					localStorage.removeItem("email"+(i-1)+"");
+					localStorage.removeItem("jam"+(i-1)+"");
+					localStorage.removeItem("wisata"+(i-1)+"")
+					localStorage.removeItem("pilihPemandu"+(i-1)+"");
+					localStorage.removeItem("pemandu"+(i-1)+"");
+					localStorage.removeItem("password"+(i-1)+"");
+					localStorage.removeItem("username"+(i-1)+"");
+					localStorage.removeItem("tanggal"+(i-1)+"");
+					return 0;
+				}
+				
+				localStorage.setItem("nama"+i+"",(localStorage.getItem("nama"+(i+1)+"")));
+				localStorage.setItem("gender"+i+"",(localStorage.getItem("gender"+(i+1)+"")));
+				localStorage.setItem("umur"+i+"",(localStorage.getItem("umur"+(i+1)+"")));
+				localStorage.setItem("kewarganegaraan"+i+"",(localStorage.getItem("kewarganegaraan"+(i+1)+"")));
+				localStorage.setItem("telp"+i+"",(localStorage.getItem("telp"+(i+1)+"")));
+				localStorage.setItem("email"+i+"",(localStorage.getItem("email"+(i+1)+"")));
+				localStorage.setItem("jam"+i+"",(localStorage.getItem("jam"+(i+1)+"")));
+				localStorage.setItem("wisata"+i+"",(localStorage.getItem("wisata"+(i+1)+"")));
+				localStorage.setItem("pilihPemandu"+i+"",(localStorage.getItem("pilihPemandu"+(i+1)+"")));
+				localStorage.setItem("pemandu"+i+"",(localStorage.getItem("pemandu"+(i+1)+"")));
+				localStorage.setItem("username"+i+"",(localStorage.getItem("username"+(i+1)+"")));
+				localStorage.setItem("password"+i+"",(localStorage.getItem("password"+(i+1)+"")));
+				localStorage.setItem("tanggal"+i+"",(localStorage.getItem("tanggal"+(i+1)+"")));
+			}
+			location.reload();
+			tampilUser();
+		}
+
+	</script>
+	<script type="text/javascript" src="myScript.js"></script>
+</body>
+</html>

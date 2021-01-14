@@ -1,0 +1,173 @@
+/*----------------------------------------SLIDESHOW IMAGE---------------------------------------------*/
+
+.mySlides {display: none}
+
+img {
+	width:100%; height: 55vh;
+	vertical-align: middle;
+	object-fit: 20% 20%;
+}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 100%;
+  width: 99%;
+  height: 55vh;
+  position: relative;
+  /*border: 1px solid #fff;*/
+  box-shadow: -1px 1px 20px 4px;
+  margin: auto;
+  margin-top: 30px;  
+
+}
+.text{
+	font-family: "dopestyle";
+	color: #FCD11E;
+	text-shadow: 2px 2px 1px #000;
+	background-color: rgba(0, 0, 0, 0.53);
+	box-shadow: 1px 1px 50px 7px #000;
+	font-size: 50px;
+	line-height: 60px;
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+	height: 11vh;
+	text-align: center;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-left: -50%;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  background-color: rgba(0,0,0,0.2);
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+  /*border: 1px solid #fff;*/
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+.peralihan{
+	width: 80%;
+	border-top: 3px solid #FCD11E;
+	border-bottom: 3px solid #FCD11E;
+	margin: 3% 0 0 11%;
+	font-size: 70px;
+	text-align: center;
+	color: #fff;
+	background-color: #FCD11E12;
+}
+
+.miniText{
+	margin: 20px;
+	margin-left: 2.5%;
+	margin-top: 3%;
+	padding: 1%;
+	}
+
+.learnmore{
+	display: table-cell;
+	vertical-align: middle;
+	text-align: center;
+	cursor: pointer;
+	font-weight: bold;
+	background:transparent;
+	background-image: url("images/pemandu1.jpg");
+	background-position:center;
+  	background-size:cover;
+  	background-repeat:no-repeat;
+  	object-fit: contain;
+	color: rgba(225,255,255,0);
+	width: 45%;
+	margin-top: 10px;
+	padding: 1em;
+	border:1px solid #FCD11E;
+	border-radius: 10px;
+}
+
+.learnmore:hover{
+	color: #fff;
+	opacity: 0.8;
+		transition: color 0.3s ease-in,
+          color 0.3s ease-in;
+
+}
+.elkoimg{
+	background-image: url("images/pemanduelko1.jpg");
+}
+.vinaimg{
+	background-image: url("images/pemanduvina1.jpg");
+}
+.otaimg{
+	background-image: url("images/pemanduota1.jpeg");
+}
+
+.profil{
+	font-size: 20px;
+	width: 10%;
+	text-align: center;
+	padding: 6px 1em 6px 1em;
+	cursor: pointer;
+	font-weight: bold;
+	background:transparent;
+	color: #fff;
+	margin-bottom: 3% ;
+	border-top: 2px;
+	border-left:  2px;
+	border-right:  2px;
+	border-color:#FCD11E ; 
+	transition: background-color 0.2s ease-out,
+        color 0.2s ease-out;
+}
+
+.profil:hover{
+	color: #fff;
+	background-color: #FCD11E;
+	border-radius: 30px;
+	border: 0px;
+	transition: background-color 0.3s ease-in,
+        color 0.3s ease-in;
+}
+.proTeng{
+	margin: 0 22% 0 22%;
+}
